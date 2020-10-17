@@ -1,0 +1,44 @@
+.spinner {
+  margin-left: 40%;
+  margin-top: 30%;
+}
+
+.layout-position {
+  margin-left: 13%;
+}
+.sider {
+  overflow: auto;
+  height: 150%;
+  position: fixed;
+}
+
+.category {
+  left: 0;
+}
+
+.category-bar {
+  float: left;
+  width: 25%;
+}
+
+/* .cart {
+  right: 0;
+} */
+
+.header {
+  padding: 0;
+  background-color: white;
+  text-align: center;
+  font-size: large;
+}
+
+.footer {
+  text-align: center;
+}
+
+.content {
+  margin: '24px 16px';
+  padding: 50px;
+  height: 100vh;
+  min-height: 280px;
+}
