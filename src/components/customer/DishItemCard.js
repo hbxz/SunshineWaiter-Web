@@ -1,17 +1,14 @@
 import React, { Component, Fragment } from 'react'
-import { getMenus } from './services/fakemenu'
-
 import { Card, WingBlank, WhiteSpace } from 'antd-mobile'
-import 'antd-mobile/dist/antd-mobile.css'
+import { Button } from 'antd'
+import { API_URL as baseURL } from '../../constants'
 
-import { Table, Typography, Button } from 'antd'
+import 'antd-mobile/dist/antd-mobile.css'
 import 'antd/dist/antd.css'
 
 //to make pictures display correctly. must pay attention to the order of img in file
 const requireContext = require.context('./', true, /\.jpg$/)
 const Imgs = requireContext.keys().map(requireContext)
-
-const baseURL = 'http://localhost:8000'
 
 console.log('Imgs->' + Imgs)
 

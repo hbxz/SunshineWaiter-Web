@@ -1,21 +1,20 @@
 import React from 'react'
-import 'antd/dist/antd.css'
 import { Badge } from 'antd'
 
-import '../default.css'
 import { getCookie } from '../../authenticate/Cookies'
-import { deleteUser, updateUser, readMe } from '../../apis/actions/users'
+import { updateUser, readMe } from '../../apis/actions/users'
 import { MODE } from './constant'
 import RestaurantModal from './RestaurantModal'
 import { deleteRestaurant } from '../../apis/actions/restaurants'
 import PendingInvitationModal from './PendingInvitationModal'
 import OwnedRestaurants from './OwnedRestaurants'
 import WorkAtRestaurants from './WorkAtRestaurants'
-import { Polling } from '../../apis/Polling'
 import { compareTwoArraysOfInvitationObj } from '../../services'
 import ImageUploadModal from '../../imageUpload/ImageUploadModal'
+import { API_URL as baseURL } from '../../../constants'
 
-const baseURL = 'http://localhost:8000'
+import 'antd/dist/antd.css'
+import '../default.css'
 
 class MyProfile extends React.Component {
   state = {
@@ -88,10 +87,6 @@ class MyProfile extends React.Component {
 
   UNSAFE_componentWillMount = async () => {
     await readMe(getCookie('token'), this.onSetMe)
-  }
-
-  componentDidMount = () => {
-    Polling(timer => readMe(getCookie('token'), this.onSetPendingJobs), 4000)
   }
 
   renderViewModeBasic = name => {

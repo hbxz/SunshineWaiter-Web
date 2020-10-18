@@ -3,12 +3,12 @@ import { Modal } from 'antd'
 import jwtDecode from 'jwt-decode'
 
 import ImageUpload from './ImageUploader'
+import { API_URL as baseURL } from '../../constants'
 
 class ImageUploadModal extends React.Component {
   URL = ''
 
   renderImageUpload = () => {
-    const baseURL = 'http://localhost:8000'
     const { tag, params } = this.props
     const { token } = params
 

@@ -2,8 +2,8 @@ import React from 'react'
 
 import { getUser } from '../../apis/actions/users'
 import { getCookie } from '../../authenticate/Cookies'
+import { API_URL as baseURL } from '../../../constants'
 
-const baseURL = 'http://localhost:8000'
 class StaffItemCard extends React.Component {
   state = {
     staff: null,

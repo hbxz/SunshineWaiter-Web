@@ -6,6 +6,7 @@ import SiderBar from './profile/SiderBar'
 import { getCookie, deleteCookie } from '../authenticate/Cookies'
 import './default.css'
 import { getUser } from '../apis/actions/users'
+import { API_URL } from '../../constants'
 
 class Homepage extends React.Component {
   state = {
@@ -144,7 +145,6 @@ class Homepage extends React.Component {
   }
 
   render() {
-    // const { restaurants } = this.props
     return (
       <div className="pusher">
         <div className="ui inverted vertical masthead center aligned segment">

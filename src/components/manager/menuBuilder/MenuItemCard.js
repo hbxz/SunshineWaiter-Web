@@ -4,8 +4,7 @@ import { Tooltip } from 'antd'
 
 import ImageUploadModal from '../../imageUpload/ImageUploadModal'
 import { getCookie } from '../../authenticate/Cookies'
-
-const baseURL = 'http://localhost:8000'
+import { API_URL as baseURL } from '../../../constants'
 
 class MenuItemCard extends React.Component {
   constructor(props) {
